@@ -2,7 +2,7 @@ function evenOddSubtraction(numbers) {
   let evens = 0;
   let odds = 0;
 
-  for (i = 0; i < numbers.length; i++) {
+  for (let i = 0; i < numbers.length; i++) {
     numbers[i] = Number(numbers[i]);
 
     if (numbers[i] % 2 === 0) {

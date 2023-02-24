@@ -3,7 +3,7 @@ function solve(string) {
   let keyWords = [];
 
   for (let word of string) {
-    if (/#[a-zA-Z]/.test(word)) {
+    if (/^#[a-zA-Z]+$/.test(word)) {
       keyWords.push(word);
     }
   }
@@ -13,4 +13,4 @@ function solve(string) {
   }
 }
 
-solve("Nowadays everyone uses # to tag a #special word in #socialMedia");
+solve("Nowadays everyone uses # to tag a #spec#ial word in #socialMedia");

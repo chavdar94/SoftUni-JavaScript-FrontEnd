@@ -1,9 +1,13 @@
 function wordsUppercase(words) {
-  words = words.split(" ");
-  for (let i = 0; i < words.length; i++) {
-    words[i] = words[i].toUpperCase();
+  const regexExp = /\b\w+\b/g;
+  let validWords = [];
+  let matches = words.matchAll(regexExp);
+
+  for (const match of matches) {
+    validWords.push(match[0].toUpperCase());
   }
-  console.log(words.join(", "));
+
+  console.log(validWords.join(", "));
 }
 
 wordsUppercase("Hi, how are you?");

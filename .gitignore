@@ -1,1 +1,9 @@
-/.vscode/launch.json
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+.gitignore
+.idea
+.vscode
+launch.json

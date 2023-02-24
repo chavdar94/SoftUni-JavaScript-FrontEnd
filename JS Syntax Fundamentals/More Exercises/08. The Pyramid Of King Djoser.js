@@ -29,4 +29,4 @@ function pyramidBuilder(base, increment) {
     console.log(`Final pyramid height: ${Math.floor(pyramidHeight * increment)}`);
 }
 
-pyramidBuilder(12, 1);
+pyramidBuilder(12, 1)

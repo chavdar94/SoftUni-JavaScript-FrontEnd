@@ -1,24 +1,42 @@
-function cookingByNumbers(number, ...commands) {
-    number = parseInt(number);
+function theatrePromotions(day, age) {
+    let ticketPrice = 0
 
-    for (let command of commands) {
-        if (command === "chop") {
-            number /= 2;
-            console.log(number);
-        } else if (command === "dice") {
-            number = Math.sqrt(number);
-            console.log(number);
-        } else if (command === "spice") {
-            number += 1;
-            console.log(number);
-        } else if (command === "bake") {
-            number *= 3;
-            console.log(number);
-        } else if (command === "fillet") {
-            number *= 0.8;
-            console.log(number);
+    if (day === 'Weekday') {
+        if (0 <= age <= 18) {
+            ticketPrice = 12
+        } else if (18 < age && age <= 64) {
+            ticketPrice = 18
+        } else if (64 < age && age <= 122) {
+            ticketPrice = 12
+        } else {
+            ticketPrice = 'Error!'
         }
+    } else if (day === 'Weekend') {
+        if (0 <= age && age <= 18) {
+            ticketPrice = 15
+        } else if (18 < age && age <= 64) {
+            ticketPrice = 20
+        } else if (64 < age && age <= 122) {
+            ticketPrice = 15
+        } else {
+            ticketPrice = 'Error!'
+        }
+    } else if (day === 'Holiday') {
+        if (0 <= age && age <= 18) {
+            ticketPrice = 5
+        } else if (18 < age && age <= 64) {
+            ticketPrice = 12
+        } else if (64 < age && age <= 122) {
+            ticketPrice = 10
+        } else {
+            ticketPrice = 'Error!'
+        }
+    }
+    if (ticketPrice === 'Error!') {
+        console.log(ticketPrice)
+    } else {
+        console.log(`${ticketPrice}$`)
     }
 }
 
-cookingByNumbers("32", "chop", "chop", "chop", "chop", "chop");
+theatrePromotions('Weekday', 42)

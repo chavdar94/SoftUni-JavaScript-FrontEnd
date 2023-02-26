@@ -2,7 +2,7 @@ function theatrePromotions(day, age) {
     let ticketPrice = 0
 
     if (day === 'Weekday') {
-        if (0 <= age <= 18) {
+        if (0 <= age && age <= 18) {
             ticketPrice = 12
         } else if (18 < age && age <= 64) {
             ticketPrice = 18

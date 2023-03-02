@@ -1,4 +1,4 @@
-function simpleClaculator(firstNumber, secondNumber, operator) {
+function simpleCalculator(firstNumber, secondNumber, operator) {
     switch (operator) {
         case 'multiply':
             console.log(firstNumber * secondNumber)
@@ -15,6 +15,6 @@ function simpleClaculator(firstNumber, secondNumber, operator) {
     }
 }
 
-simpleClaculator(5,
+simpleCalculator(5,
     5,
     'multiply')

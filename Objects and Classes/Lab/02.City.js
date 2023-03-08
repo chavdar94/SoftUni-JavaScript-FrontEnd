@@ -1,7 +1,9 @@
 function solve(city) {
-    for (const [key, value] of Object.entries(city)) {
-        console.log(`${key} -> ${value}`);
-    }
+    // for (const [key, value] of Object.entries(city)) {
+    //     console.log(`${key} -> ${value}`);
+    // }
+    return Object.entries(city)
+        .forEach(([key, value]) => console.log(`${key} -> ${value}`))
 }
 
 solve({

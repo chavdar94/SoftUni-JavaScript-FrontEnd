@@ -13,7 +13,7 @@ function solve(array) {
     if (parking.size === 0){
         console.log('Parking Lot is Empty');
     } else {
-        console.log([...parking].sort().join('\n'));
+        console.log([...parking].sort((a, b) => a.localeCompare(b)).join('\n'));
     }
 }
 

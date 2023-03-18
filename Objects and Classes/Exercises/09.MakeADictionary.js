@@ -1,14 +1,14 @@
 function solve(array) {
-    const dictionary = {}
+    const dictionary = {};
 
     for (const info of array) {
-        let obj = JSON.parse(info)
+        let obj = JSON.parse(info);
         for (const [term, definition] of Object.entries(obj)) {
-            dictionary[term] = definition
+            dictionary[term] = definition;
         }
     }
 
-    let sorted = Object.fromEntries(Object.entries(dictionary).sort())
+    let sorted = Object.fromEntries(Object.entries(dictionary).sort());
 
     for (const [term, desc] of Object.entries(sorted)) {
         console.log(`Term: ${term} => Definition: ${desc}`);

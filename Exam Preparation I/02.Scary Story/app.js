@@ -8,6 +8,7 @@ function solve() {
     const publishBtn = document.querySelector('.button-section input');
     const userInfo = [firstName, lastName, age, storyTitle, genre, story];
 
+
     publishBtn.addEventListener('click', collectInfoHandler);
 
     function collectInfoHandler() {

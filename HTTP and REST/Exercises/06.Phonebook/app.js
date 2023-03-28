@@ -29,17 +29,18 @@ function attachEvents() {
                 phonebookUl.appendChild(li)
             }
         }catch (e){
+            console.log(e.status);
         }
     }
 
-    async function deleteNumber(e) {
+    async function deleteNumber() {
         const id = this.id
         const httpHeaders = {
             method: 'DELETE'
         }
 
-        const response = await fetch(`${BASE_URL}/${id}`, httpHeaders)
-        const data = await loadPhonebook()
+        await fetch(`${BASE_URL}/${id}`, httpHeaders)
+        await loadPhonebook()
 
     }
 
@@ -55,8 +56,8 @@ function attachEvents() {
             })
         }
 
-        const response = await fetch(BASE_URL, httpHeaders)
-        const data = await loadPhonebook()
+        await fetch(BASE_URL, httpHeaders)
+        await loadPhonebook()
 
         personInput.value = ''
         phoneInput.value = ''

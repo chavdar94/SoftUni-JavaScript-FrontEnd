@@ -10,7 +10,6 @@ function solve() {
 
 
     publishBtn.addEventListener('click', collectInfoHandler);
-
     function collectInfoHandler() {
 
         if (checkValidInformation()) {

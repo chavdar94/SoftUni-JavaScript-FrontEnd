@@ -65,6 +65,7 @@ function solve() {
 
 		updateBtn.disabled = false
 		addBtn.disabled = true
+
 	}
 
 	async function deleteProduct(event) {
@@ -93,6 +94,8 @@ function solve() {
 		productName.value = ''
 		countField.value = ''
 		priceField.value = ''
+		addBtn.disabled = false
+		updateBtn.disabled = true
 	}
 
 	addBtn.addEventListener('click', addProduct)

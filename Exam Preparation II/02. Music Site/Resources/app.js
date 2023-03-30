@@ -29,7 +29,7 @@ function solve() {
 		const authorValue = author.value;
 		const dateValue = date.value;
 		const div = createElement('div', null, songsContainer, null, ['hits-info']);
-		createSong(div, genreValue, nameValue, authorValue, dateValue, true, true, true);
+		createSong(div, genreValue, nameValue, authorValue, dateValue);
 
 		songInfo.genre = genreValue;
 		songInfo.name = nameValue;
@@ -44,25 +44,18 @@ function solve() {
 	});
 
 
-
-	function createSong(parent, genre, name, author, date, save, like, deleteBtn) {
+	function createSong(parent, genre, name, author, date) {
 		createElement('img', null, parent, null, null, {src: './static/img/img.png'});
 		createElement('h2', `Genre: ${genre}`, parent);
 		createElement('h2', `Name: ${name}`, parent);
 		createElement('h2', `Author: ${author}`, parent);
 		createElement('h3', `Date: ${date}`, parent);
-		if (save) {
-			const saveBtn = createElement('button', 'Save song', parent, null, ['save-btn']);
-			saveBtn.addEventListener('click', saveSong);
-		}
-		if (like) {
-			const likeBtn = createElement('button', 'Like song', parent, null, ['like-btn']);
-			likeBtn.addEventListener('click', likeSong);
-		}
-		if (deleteBtn) {
-			const deleteBtn = createElement('button', 'Delete', parent, null, ['delete-btn']);
-			deleteBtn.addEventListener('click', deleteSong);
-		}
+		const saveBtn = createElement('button', 'Save song', parent, null, ['save-btn']);
+		saveBtn.addEventListener('click', saveSong);
+		const likeBtn = createElement('button', 'Like song', parent, null, ['like-btn']);
+		likeBtn.addEventListener('click', likeSong);
+		const deleteBtn = createElement('button', 'Delete', parent, null, ['delete-btn']);
+		deleteBtn.addEventListener('click', deleteSong);
 
 
 	}

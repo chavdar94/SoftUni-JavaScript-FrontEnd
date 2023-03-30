@@ -39,8 +39,6 @@ function solve() {
 		for (const field of fieldsArray) {
 			field.value = '';
 		}
-
-
 	});
 
 
@@ -56,8 +54,6 @@ function solve() {
 		likeBtn.addEventListener('click', likeSong);
 		const deleteBtn = createElement('button', 'Delete', parent, null, ['delete-btn']);
 		deleteBtn.addEventListener('click', deleteSong);
-
-
 	}
 
 	function saveSong() {
@@ -70,7 +66,6 @@ function solve() {
 
 		songsContainer.removeChild(div)
 		savedSongs.appendChild(div)
-
 	}
 
 	function likeSong() {
@@ -123,8 +118,7 @@ function solve() {
 				htmlElement.setAttribute(key, attrs[key]);
 			}
 		}
-
+		
 		return htmlElement;
-
 	}
 }

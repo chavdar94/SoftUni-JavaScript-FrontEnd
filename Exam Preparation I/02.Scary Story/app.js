@@ -11,6 +11,7 @@ function solve() {
 
     publishBtn.addEventListener('click', collectInfoHandler);
     function collectInfoHandler() {
+        userInfo.forEach(input => console.log(input.value))
 
         if (checkValidInformation()) {
 

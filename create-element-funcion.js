@@ -30,3 +30,16 @@ function createElement(type, content, parentNode, id, classes, attrs) {
     return htmlElement;
 
 }
+
+// HTTP function
+const apiRequest = async ({url = '', method = '', id = '', item = ''}) => {
+        const options = {
+            method: method
+        }
+        if (['PATCH', 'POST'].includes(method)) {
+            options.headers = {'Content-Type': 'application/json'}
+            options.body = JSON.stringify(item)
+        }
+        const data = await fetch(`${url}${id}`, options)
+        return await data.json()
+    }

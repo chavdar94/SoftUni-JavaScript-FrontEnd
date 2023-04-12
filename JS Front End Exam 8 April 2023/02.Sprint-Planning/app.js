@@ -34,7 +34,7 @@ function solve() {
 		'High Priority Bug': ['&#9888', 'high-priority'],
 	}
 	let id = 0
-	let currentPoints  = 0
+	let currentPoints = 0
 	buttonsForm.createBtn.addEventListener('click', createNewTask)
 	buttonsForm.deleteBtn.addEventListener('click', deleteTask)
 
@@ -70,7 +70,7 @@ function solve() {
 		buttonsForm.createBtn.disabled = true
 		buttonsForm.deleteBtn.disabled = false
 	}
-	
+
 	function deleteTask(event) {
 		const form = event.target.parentElement.parentElement
 		const currentForm = form.querySelector('#task-id').value

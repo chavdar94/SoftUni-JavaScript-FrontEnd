@@ -116,7 +116,7 @@ function solve() {
 				htmlElement.setAttribute(key, attrs[key]);
 			}
 		}
-		
+
 		return htmlElement;
 	}
 }

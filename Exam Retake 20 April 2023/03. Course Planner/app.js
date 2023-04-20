@@ -93,7 +93,6 @@ function solve() {
 				type: inputFields.type.value,
 				description: inputFields.description.value,
 				teacher: inputFields.teacherName.value,
-				_id: id
 			}
 		})
 

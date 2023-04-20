@@ -109,7 +109,8 @@ function solve() {
 		id = e.target.parentElement.id
 
 		await apiRequest({
-			url: `${BASE_URL}${id}`,
+			url: `${BASE_URL}`,
+			id: id,
 			method: 'DELETE',
 		})
 		await loadCoursesHandler()
